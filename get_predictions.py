@@ -53,9 +53,9 @@ while True:
         image =cv2.cvtColor(crop_img,cv2.COLOR_BGR2RGB)
         image =cv2.resize(image,(224,224))
         
-        pred_fire_detection_fire_no_fire_winter.predict(image)
-        pred_fire_detection_fire_neutral_smoke.predict(image)
-        pred_fire_detection_fire_no_fire.predict(image)
+        pred_fire_detection_fire_no_fire_winter = fire_detection_fire_no_fire_winter.predict(image)
+        pred_fire_detection_fire_neutral_smoke = fire_detection_fire_neutral_smoke.predict(image)
+        pred_fire_detection_fire_no_fire = fire_detection_fire_no_fire.predict(image)
         
         text_prediction_results = f"pred_fire_detection_fire_no_fire_winter = {pred_fire_detection_fire_no_fire_winter}," 
                                   f"pred_fire_detection_fire_neutral_smoke ={pred_fire_detection_fire_neutral_smoke}"
